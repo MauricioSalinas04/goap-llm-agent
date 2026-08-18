@@ -36,9 +36,17 @@ El proyecto se acota exclusivamente al componente de **interacciones sociales** 
 - Interfaz de depuración visual en tiempo real (estado interno, decisiones y justificación de acciones).
 - Documentación empírica del comportamiento observado y del costo computacional del modelo de lenguaje en conjunto con el planificador.
 
+## Estructura del repo
+
+- [`docs/`](./docs) — documentación de la tesis: [`roadmap.md`](./docs/roadmap.md) (fuente de verdad del avance), `marco-teorico.md`, `metodologia.md`, `resultados.md`, `conclusiones.md`.
+- [`unity-project/`](./unity-project) — proyecto Unity: planificador GOAP, escena 3D, UI de depuración.
+- [`llm-service/`](./llm-service) — servicio de inferencia del módulo de razonamiento (LLM compacto).
+- [`tests/`](./tests) — scripts de prueba de desempeño (latencia, coherencia).
+- [`results/`](./results) — logs y métricas crudas de las pruebas.
+
 ## Estado del proyecto
 
-🚧 En fase de anteproyecto / planeación. Ver el [cronograma tentativo](./Anteproyecto.pdf) (16 semanas) para las etapas: revisión y marco teórico, diseño metodológico, desarrollo del módulo táctico (GOAP), desarrollo del módulo de razonamiento (LLM), integración y UI de depuración, pruebas de desempeño, y documento final.
+🚧 En curso — Etapa 1 (Revisión y Marco Teórico), semana S3. Ver [`docs/roadmap.md`](./docs/roadmap.md) para el avance semana a semana y las [Milestones](https://github.com/MauricioSalinas04/goap-llm-agent/milestones) en GitHub.
 
 ## Referencias
 

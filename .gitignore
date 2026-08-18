@@ -1,0 +1,42 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+[Mm]emoryCaptures/
+*.csproj
+*.sln
+*.unityproj
+.vs/
+.vscode/
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+crashlytics-build.properties
+
+# Python (llm-service)
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+*.egg-info/
+
+# Modelos / pesos (evitar subir archivos pesados por accidente)
+*.gguf
+*.bin
+*.safetensors
+*.onnx
+
+# OS / editor
+.DS_Store
+Thumbs.db
