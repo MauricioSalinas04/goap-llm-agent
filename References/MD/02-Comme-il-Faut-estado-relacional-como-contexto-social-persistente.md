@@ -1,0 +1,47 @@
+## 2. Comme il Faut y el estado relacional como contexto social persistente
+
+### 2.1 Qué es CiF y en qué contexto surgió
+
+Comme il Faut (CiF) es un sistema de inteligencia artificial social desarrollado en el Expressive Intelligence Studio de la Universidad de California en Santa Cruz por Josh McCoy, Michael Mateas, Noah Wardrip-Fruin, Mike Treanor, Ben Samuel y Aaron Reed (~2009–2014). Su punto de partida es una observación crítica: los videojuegos poseen modelos computacionales muy desarrollados del espacio físico, pero los modelos computacionales de la interacción social son escasos, ofrecen poco juego social y exigen un enorme esfuerzo de autoría [2]. CiF propone un modelo *jugable* de interacción social inspirado en el análisis dramatúrgico de Goffman y en los "juegos psicológicos" de Berne, orientado al "poder de autoría" más que a la fidelidad con el mundo cotidiano [2]. Su aplicación insignia fue *Prom Week*, lanzado el 14 de febrero de 2012 (Día de San Valentín) de forma gratuita en Facebook y otras plataformas web: un juego de simulación social en el que el jugador moldea la vida social de 18 estudiantes de secundaria durante la semana previa al baile de graduación, y que colocó a CiF en el centro del diseño para lograr lo que los autores llamaron "social physics" [3][4].
+
+### 2.2 Los "social exchanges" y el estado relacional persistente
+
+La estructura primaria de representación en CiF es el *social exchange*: una interacción social multi-personaje cuya función es modificar el *social state* que existe dentro y a través de los participantes [2][3]. Cada social exchange tiene un iniciador (i), un respondedor (r) y un tercero opcional (o), y se compone de un *intent*, precondiciones, *influence rule sets* para i y r, un conjunto de efectos y de *instantiations* [2]. En lugar de disparar transiciones de estado físico o reglas puntuales, CiF calcula la *volition* (deseo) de cada personaje de ejecutar cada intercambio con cada otro personaje —*Prom Week* define más de 40 social exchanges, cada uno con más de 20 escenas de diálogo por plantilla— sumando el peso de las *influence rules* verdaderas y de las *microtheories* aplicables [3][4]. El respondedor decide entonces aceptar o rechazar, y el efecto más saliente se aplica, tras lo cual se ejecutan las *trigger rules* que propagan consecuencias en cascada por el mundo social [2][3].
+
+El estado social que estos intercambios modifican es explícitamente relacional y persistente. CiF modela a los personajes con *traits* (rasgos permanentes), *relationships* (estados binarios, bidireccionales y públicos como amigos, pareja o enemigos) y *statuses* (efectos temporales) [3]. Sobre ellos se superponen las *social networks* —redes dirigidas de valor numérico, como la red de "romance" o de "coolness"— que representan sentimientos internos y admiten asimetrías (x puede sentir 20 de romance hacia y mientras y siente 95 hacia x) [3]. A esto se añaden la *cultural knowledge base* (CKB) y la *social facts database* (SFDB), que almacenan la historia social completa, incluyendo la "back story" previa al jugador, para que los personajes razonen sobre su pasado [3]. Con este esquema, *Prom Week* llegó a codificar más de 5000 consideraciones sociales y unas 900 "story instantiations" [4].
+
+### 2.3 Por qué CiF evidencia la necesidad de contexto social sobre el estado físico
+
+CiF explicita y resuelve una limitación de los enfoques anteriores. Frente a máquinas de estados finitos, árboles de comportamiento o redes de tareas jerárquicas, que encapsulan el conocimiento de dominio de forma implícita mediante pocas pre/postcondiciones procedimentales, CiF elige el comportamiento evaluando *todas* las reglas aplicables de una gran base que codifica la normalidad social del mundo narrativo [2][3]. A diferencia de aproximaciones basadas en utilidad orientadas al resultado, la deliberación de CiF razona sobre qué deseos son apropiados dado el contexto social y luego negocia entre ellos [3]. La representación misma de los personajes es "delgada": lo que los hace ricos y únicos no es su estado físico inmediato, sino su situación relacional en el mundo social y su historia interconectada; los personajes se modelan como "semiotic selves" [3]. Es aquí donde la literatura reconoce, por primera vez de forma central en la evolución de las arquitecturas de NPC, que el comportamiento creíble exige representar un contexto social persistente que trasciende el estado físico del entorno.
+
+### 2.4 Continuadores: estado relacional dinámico y actuación dirigida por argumentación
+
+La idea de un estado relacional dinámico fue retomada y extendida por trabajos posteriores. El *Ensemble Engine* (2015) generalizó las lecciones de CiF en un motor de "social physics" de código abierto y dominio-agnóstico [5], y CiF-CK adaptó la arquitectura a un RPG comercial en primera persona (mod *Social NPCs* para *Skyrim*), donde los NPCs actúan según sus sentimientos cambiantes hacia otros agentes [6]. Más recientemente, esta línea converge con los modelos de lenguaje: *Slice of Life* usa el estado social simbólico del motor para generar *prompts* fundamentados que producen diálogo contextual mediante un LLM [8]. En paralelo, la fuente primaria de este apartado —Mitchell y McCoy (2025), de UC Davis— propone una arquitectura de "argument-driven, dynamic character performance" compuesta, en palabras de los autores, por "a strategic layer for character-centric decision-making, a defeasible logic programming (DELP) reasoning layer for argumentation, and a tactical layer using A Behavior Language (ABL)" [1]. Cabe precisar, en aras del rigor, que este trabajo de 2025 no describe internamente a CiF: lo cita una sola vez, en su sección de trabajos relacionados ("Architectures of Mind", p. 288), como uno de los "sophisticated social simulation engines like Comme il Faut (CiF) (McCoy et al. 2011) and the engine used in Versu (Evans and Short 2014)" [1]. Su aporte propio es mostrar cómo el estado relacional —relaciones de alianza, ayuda, sospecha o amenaza codificadas como hechos rebatibles en la base de conocimiento del personaje— puede alimentar una deliberación argumentativa que justifica, y no solo computa, la acción del personaje [1]. Esta doble genealogía (estado social persistente más deliberación explicable) es precisamente el antecedente que motiva usar un modelo de lenguaje para la deliberación social en la presente tesis.
+
+---
+
+### Referencias nuevas
+
+**Fuente primaria obligatoria**
+
+[1] Mitchell, K., & McCoy, J. (2025). A Method to the Machine: An Architecture for Argument-Driven, Dynamic Character Performance. Proceedings of the Twenty-First AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE 2025), 287–296.
+
+**Fuentes complementarias (agregadas por la investigación)**
+
+[2] McCoy, J., Treanor, M., Samuel, B., Wardrip-Fruin, N., & Mateas, M. (2011). Comme il Faut: A System for Authoring Playable Social Models. Proceedings of the Seventh AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE 2011), 158–163.
+
+[3] McCoy, J., Treanor, M., Samuel, B., Reed, A. A., Mateas, M., & Wardrip-Fruin, N. (2014). Social Story Worlds With Comme il Faut. IEEE Transactions on Computational Intelligence and AI in Games, 6(2), 97–112.
+
+[4] McCoy, J., Treanor, M., Samuel, B., Mateas, M., & Wardrip-Fruin, N. (2011). Prom Week: Social Physics as Gameplay. Proceedings of the 6th International Conference on the Foundations of Digital Games (FDG 2011), 319–321.
+
+[5] Samuel, B., Reed, A. A., Maddaloni, P., Mateas, M., & Wardrip-Fruin, N. (2015). The Ensemble Engine: Next-Generation Social Physics. Proceedings of the 10th International Conference on the Foundations of Digital Games (FDG 2015).
+
+[6] Guimarães, M., Santos, P. A., & Jhala, A. (2017). CiF-CK: An Architecture for Social NPCs in Commercial Games. Proceedings of the IEEE Conference on Computational Intelligence and Games (CIG 2017).
+
+[7] Mitchell, K. D., & McCoy, J. (2024). Exploring Stanislavskian Performance for Agent-based Nonplayer Characters through Defeasible Logic. Proceedings of the 24th ACM International Conference on Intelligent Virtual Agents (IVA 2024), Article 44, 1–4.
+
+[8] Treanor, M., Samuel, B., & Nelson, M. J. (2024). Prototyping Slice of Life: Social Physics with Symbolically Grounded LLM-based Generative Dialogue. Proceedings of the 19th International Conference on the Foundations of Digital Games (FDG 2024).
+
+---
+
+*Nota de verificación de fuentes (revisar antes de integrar a la bibliografía final):* Se consultó y verificó en **texto completo** la fuente primaria [1] (PDF oficial en ojs.aaai.org, pp. 287–296) y las fundacionales [2] y [3] (PDF completos en cdn.aaai.org y mtreanor.com/ben-samuel.com). Las fuentes [4], [5], [6], [7] y [8] se verificaron mediante abstracts, proceedings y páginas oficiales de los autores, pero **no** en su texto íntegro; conviene confirmar paginación, volumen y editorial exactas —en particular la referencia [5] (FDG 2015, sin páginas confirmadas) y [8] (FDG 2024, versión "late-breaking")— antes de fijarlas en la bibliografía. Nota adicional: la fuente primaria [1] es un trabajo sobre una arquitectura propia (Viv/DeLP/ABL) que sólo menciona CiF de pasada; el detalle técnico sobre "social exchanges" y estado relacional proviene de [2] y [3], no de [1].
