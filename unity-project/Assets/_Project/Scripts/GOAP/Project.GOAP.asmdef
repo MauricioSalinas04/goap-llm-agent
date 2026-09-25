@@ -1,0 +1,16 @@
+{
+    "name": "Project.GOAP",
+    "rootNamespace": "Project.GOAP",
+    "references": [
+        "Project.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

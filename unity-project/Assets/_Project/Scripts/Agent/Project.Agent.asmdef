@@ -1,0 +1,17 @@
+{
+    "name": "Project.Agent",
+    "rootNamespace": "Project.Agent",
+    "references": [
+        "Project.Core",
+        "Project.GOAP"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -9,6 +9,7 @@
 [Mm]emoryCaptures/
 *.csproj
 *.sln
+*.slnx
 *.unityproj
 .vs/
 .vscode/
@@ -20,6 +21,13 @@
 *.opendb
 *.VC.db
 crashlytics-build.properties
+.idea/
+*.tmp
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+*.log
 
 # Python (llm-service)
 __pycache__/
@@ -43,3 +51,6 @@ Thumbs.db
 
 # General
 prompts/
+
+# Office lock files
+~$*

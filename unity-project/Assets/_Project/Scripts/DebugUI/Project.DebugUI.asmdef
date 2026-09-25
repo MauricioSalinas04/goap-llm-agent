@@ -1,0 +1,19 @@
+{
+    "name": "Project.DebugUI",
+    "rootNamespace": "Project.DebugUI",
+    "references": [
+        "Project.Core",
+        "Project.GOAP",
+        "Project.Agent",
+        "Project.LLMClient"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
