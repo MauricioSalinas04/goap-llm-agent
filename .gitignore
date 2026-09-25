@@ -54,3 +54,6 @@ prompts/
 
 # Office lock files
 ~$*
+
+# Instaladores / ejecutables
+*.exe
